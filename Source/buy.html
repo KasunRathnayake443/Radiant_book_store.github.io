@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: Arial;
+  font-size: 17px;
+  padding: 8px;
+  background-image: url("images/background3.jpg");
+    background-color: #cccccc;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: -ms-flexbox; 
+  display: flex;
+  -ms-flex-wrap: wrap; 
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%;
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; 
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; 
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #e99d10;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #ddd318;
+}
+
+a {
+  color: #2196F3;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+.select{
+  width: 200px;
+  height: 30px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 15px;
+  background-color: #f2f2f2;
+}
+
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+
+.bkbtn{
+  width: 50px;
+  height: 20px;
+  border-radius: 5px;
+  background-color: #e99d10;
+
+}
+.bkbtn:hover{
+  background-color: #ddd318;
+}
+</style>
+</head>
+<body>
+<a href="author-books .html">
+<button class="bkbtn">Back</button>
+</a>
+
+<div class="row">
+  <div class="col-75">
+    <div class="container">
+      <form action="php/buy.php" method="post">
+      
+        <div class="row">
+          <div class="col-50">
+            <h3>Billing Address</h3>
+            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Kasun Rathnayake">
+            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+            <input type="text" id="email" name="email" placeholder="john@example.com">
+            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+            <input type="text" id="adr" name="address" placeholder="No.xx, Main street,Home town">
+            <label for="city"><i class="fa fa-institution"></i> City</label>
+            <input type="text" id="city" name="city" placeholder="Colombo">
+
+            <div class="row">
+          
+              <div class="col-50">
+                <label for="zip">Zip</label>
+                <input type="text" id="zip" name="zip" placeholder="10001">
+              </div>
+
+              <div class="col-50">
+                <label for="state">Payment Method</label>
+                <select class="select">
+                  <option>Cash On Delivery</option>
+                  <option>Card Payments</option>
+                  <option>Bank Transfers</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-50">
+            <div class="row">
+              <div class="col-50">
+            <img src="images/books/auther/2.png">
+          </div>
+          <div class="col-50">
+            <h3>The Hound Of The Baskervies</h3>
+            <p style="color: chocolate;">Rs.850.00</p>
+            <p style="width: 300px; height: 500px; overflow: auto;">
+              The Hound of the Baskervilles is the third of the four crime novels by British
+               writer Arthur Conan Doyle featuring the detective Sherlock Holmes. Originally
+                serialised in The Strand Magazine from August 1901 to April 1902, it is set in 
+                1889 largely on Dartmoor in Devon in England's West Country and tells the story 
+                of an attempted murder inspired by the legend of a fearsome, diabolical hound of 
+                supernatural origin. Holmes and Watson investigate the case. This was the first 
+                appearance of Holmes since his apparent death in "The Final Problem", and the
+                 success of The Hound of the Baskervilles led to the character's eventual revival.
+            </p>
+          </div>
+          </div>
+          </div> 
+          
+        </div>
+        <label>
+          <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+        </label>
+        <input class="btn" type="submit" value="Continue to Checkout" >
+      </form>
+    </div>
+  </div>
+  
+</div>
+
+</body>
+</html>

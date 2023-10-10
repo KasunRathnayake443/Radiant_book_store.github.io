@@ -28,11 +28,7 @@ else {
     else {
         echo "<script>alert('You are already subcribed to our newsletter'); document.location='../../index.html'</script>"; 
     }
-
-     
-  
-   
-    
+ 
     $stml->close();
     $conn->close();
  
