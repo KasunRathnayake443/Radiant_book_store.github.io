@@ -1,0 +1,1 @@
+Radiant Book Store is an online bookstore developed as a university project, designed to provide a seamless and enjoyable book shopping experience. With a wide selection of titles, user-friendly navigation, and a range of features, Radiant Book Store aims to be a one-stop destination for all book lovers.
